@@ -1,7 +1,7 @@
 
 resource "aws_instance" "Terraform" {
   ami           = var.ami_id
-  instance_type = var.instance_type == "dev" ? var.instance_type : "t3.micro"
+  instance_type = var.instance_type == "prod" ? var.instance_type : "t3.micro"
   vpc_security_group_ids = [aws_security_group.allow_all.id]
   tags = var.ec2_tags
 }

@@ -47,5 +47,5 @@ variable "egress_in_port" {
 }
 
 variable  "protocol" {
-  default     = 0
+  default     = -1
 }
